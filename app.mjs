@@ -6,7 +6,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHAT_ID = process.env.CHAT_ID;
 const BIKE_LIST_URL = process.env.BIKE_LIST_URL;
 const BIKE_TOP_URL = process.env.BIKE_TOP_URL;
-const MAX_PRICE = 250;
+const MAX_PRICE = 200;
 
 const app = async () => {
     const response = await fetch(BIKE_LIST_URL);
