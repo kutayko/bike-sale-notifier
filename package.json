@@ -1,0 +1,17 @@
+{
+  "name": "bike-sale-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "kutayko",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.1",
+    "node-html-parser": "^5.2.0",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
