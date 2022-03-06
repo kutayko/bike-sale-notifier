@@ -1,15 +1,17 @@
 {
-  "name": "bike-sale-checker",
+  "name": "bike-sale-notifier",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "local": "node local.js",
+    "pack": "zip -r bike-sale-notifier index.js app.mjs node_modules"
   },
   "author": "kutayko",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "node-fetch": "^3.2.1",
     "node-html-parser": "^5.2.0",
     "node-telegram-bot-api": "^0.56.0"
