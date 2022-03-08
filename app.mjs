@@ -70,7 +70,7 @@ const fetchSizes = (products) => {
 
 const serialize = (products) => products
     .map(p => [
-            `${p.name}`,
+            `${p.name.replace(".", "")}`,
             `€ ${p.price}`,
             `${ p.sizes.join(", ") }`,
             `[link](${p.url})`
