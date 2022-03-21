@@ -68,13 +68,19 @@ const fetchSizes = (products) => {
     return Promise.all(promises);
 }
 
-const serialize = (products) => products
-    .map(p => [
-            `${p.name.replace(".", "")}`,
-            `€ ${p.price}`,
-            `${ p.sizes.join(", ") }`,
-            `[link](${p.url})`
-        ].join("\n")
+const serialize = (products) =>
+    `From [${escape(BIKE_TOP_URL)}]\n\n` +
+    products.map(p => [
+        `${p.name.replace(".", "")}`,
+        `€ ${p.price}`,
+        `${p.sizes.join(", ")}`,
+        `[link](${p.url})`
+    ].join("\n")
     ).join("\n\n");
+
+const escape = (str) => str.replace(
+        /(\[[^\][]*]\(http[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi,
+        (x, y) => y ? y : '\\' + x
+    );
 
 export { app };
