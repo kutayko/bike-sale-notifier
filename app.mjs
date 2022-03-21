@@ -68,7 +68,7 @@ const fetchSizes = (products) => {
     return Promise.all(promises);
 }
 
-const serialize = (products) =>
+const serialize = (products) => products.length == 0 ? "" :
     `From [${escape(BIKE_TOP_URL)}]\n\n` +
     products.map(p => [
         `${p.name.replace(".", "")}`,
